@@ -1,0 +1,37 @@
+Nom       : Jourdan
+Prénom    : Pierre-Eliot
+Groupe TP : I
+
+
+Consigne :  Ci-dessous, répondre à la place des « ... ».
+
+
+=====[ Temps ]==================================================================
+
+Temps consacré au projet pour rendre la V1 : 8 heures 00 minutes
+Temps consacré au projet pour rendre la V2 : ... heures ... minutes
+Pour la V2 on ne tiendra pas compte du temps passé sur la V1.
+Bien sûr, Les temps renseignés ici ne sont pas pris en compte dans la notation.
+
+
+=====[ Questions ]==============================================================
+
+Indiquer la relation UML entre Cercle et le Point centre du cercle.
+-------------------------------------------------------------------
+
+La relation UML entre le cercle et son point centre est une relation structurelle. En effet, Point est le type du centre qui est un attribut de la classe Cercle. Il s'agit d'une relation de composition car lorsqu'on détruit un cercle, on détruit tous les points qui le composent. En effet, un cercle est "composé" d'un ensemble de points.
+
+
+Comment est réalisée l'exigence E18 ?
+-------------------------------------
+
+Comme les classes sont considérées comme des pointeurs, toute modification du point initialisé va modifier le centre du cecle (ce ne sera pas le cas du rayon puisqu'il est de type double). On choisit donc de faire une copie du point centre du cercle (new Point) au moment de l'instancier afin de ne pas pouvoir changer les caractéristiques d’un cercle sans passer par les opérations définies dans la classe.
+
+
+
+=====[ Explications ]===========================================================
+
+(Facultatif) Donner ici les explications supplémentaires utiles à la
+compréhension du travail rendu.
+
+...

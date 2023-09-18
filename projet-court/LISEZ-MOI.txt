@@ -1,0 +1,56 @@
+Nom       : Jourdan
+Prénom    : Pierre-Eliot
+Groupe TP : I
+
+Les « ... » indiquent les endroits à compléter.
+
+=====[ Temps passé ]============================================================
+
+Ces informations de temps sont demandées à titre indicatif et ne sont pas
+prises en compte dans la notation du projet.
+
+Toutes les durées sont à saisir en heures.  Par exemple, si vous avez passé
+1h45, il faudra indiquer 1.75.  Si vous avez passé 2h30, il faudra indiquer
+2.5.
+
+* Temps passé sur la V1 (en h) : 15
+* Temps passé sur la V2 (en h) : 0.5
+
+
+=====[ Questions ]==============================================================
+
+--------------------------------------------------------------------------------
+Pourquoi l'exception OperationInterditeException ne peut pas être définie
+comme vérifiée par le compilateur ?
+--------------------------------------------------------------------------------
+
+L'exception OperationInterditeException ne peut être définie comme vérifiée par le compilateur car c'est une sous classe de la classe RuntimeException qui n'est pas vérifiée par le compilateur. Par ailleurs, comme l'exception OperationInterditeException n'est pas présente dans l'interface jeu (méthode retirer) alors on ne peut pas l'ajouter dans la méthode retirer du proxy donc elle ne peut pas être vérifiée par le compilateur. Il n'est donc pas nécessaire de la traiter.
+
+
+--------------------------------------------------------------------------------
+Expliquer ce qu'il faut faire pour ajouter un nouveau niveau de jeu, par
+exemple la stratégie lente (C13).  Pour plus de précision, on numérotera
+les étapes à faire.
+--------------------------------------------------------------------------------
+
+Pour ajouter un niveau de jeu supplémentaire (stratégie lente) il faut créer une nouvelle classe "Lente" qui implémente l'interface stratégie (on définit dedans tous les éléments caractéristiques de cette nouvelle classe, en particulier le getPrise()). Puis il suffira simplement de modifier la classe Jouer (respect de la contrainte C13) en rajoutant un case "lente" dans le switch de la méthode creationJoueur qui initialisera la stratégie du joueur à Lente.
+
+
+--------------------------------------------------------------------------------
+Expliquer ce qui permet, dans votre conception, de changer dynamiquement
+(en cours d'exécution du programme) la stratégie d'un joueur (C14).
+--------------------------------------------------------------------------------
+
+Il est possible de changer la stratégie d'un joueur au cours de l'exécution du programme car chaque classe de stratégie (Humain, Naif...) implante l'interface Strategie. On peut donc alors implanter une méthode "setStrategie(vstrategie)" dans la classe Joueur et rajouter un appel à cette méthode dans la 1e boucle while de la méthode arbitrer (classe Arbitre). Cela permettra donc de changer de stratégie au cours de la partie.
+
+
+=====[ Explications ]===========================================================
+
+--------------------------------------------------------------------------------
+Donner ici les explications supplémentaires utiles à la compréhension du
+travail rendu.
+--------------------------------------------------------------------------------
+
+...
+
+--------------------------------------------------------------------------------
